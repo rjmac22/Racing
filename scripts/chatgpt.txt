@@ -1,0 +1,27 @@
+🧠 **Project Context for ChatGPT**
+
+I'm working on horse racing analysis in Python, using a cleaned SQLite database `raceform.db` located in `C:/Users/Rob/Documents/Racing/db/`. The DB includes both UK and Irish race results from 1990 to 2025, originally from Kaggle and other historical datasets.
+
+### 🔍 Database Summary:
+- Table: `data` (cleaned)
+- ~4.7 million rows after cleaning
+- Key columns:
+  - `date`, `race_id`, `horse`, `pos`, `age`, `jockey`, `trainer`, `sire`, `dam`, `damsire`, `prize`, `or`, `rpr`, `ts`, `going`, `draw`, etc.
+- `pos = 40` → DNF (flagged with column `dnf`)
+- `prize_raw` is stored as-is with inferred `currency`; no conversion done
+- All rows cleaned for headers, corrupt ages (e.g. `-10`), and malformed dates
+
+### 📁 Project Structure:
+- General work lives under `Racing/`
+- Derby-specific analysis lives in:
+  - `Racing/projects/epsom-derby/`
+  - `Racing/projects/epsom-derby/2025/` for this year's race
+- Current analysis in: `EDA/` notebooks (e.g. pedigree analysis)
+
+### 🎯 Current Focus:
+- Exploring **pedigree trends and performance**
+- Long-term goal is to identify meaningful **predictive features** using historical and recent race data
+- Will connect analysis to upcoming races like the **2025 Epsom Derby**
+
+Please treat this as an ongoing project — and feel free to remind me about this structure and DB setup if needed!
+please remember to bare in mind that I would like you to give me and updated prompt like this one with our latest devlopments that we have done and discussed - thank you
